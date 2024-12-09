@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Shopping List</title>
+</head>
+
+<body>
+  <div class="shopping-list">
+    <header class="shopping-list__header">
+      <img src="images/note.png" alt="Note icon" class="shopping-list__icon" />
+      <h1 class="shopping-list__title">Shopping List</h1>
+    </header>
+
+    <form id="item-form" class="shopping-list__form">
+      <div class="shopping-list__form-control">
+        <label for="item-input" class="visually-hidden">Enter Item</label>
+        <input type="text" id="item-input" name="item" class="shopping-list__input" placeholder="Enter Item" required />
+      </div>
+      <div class="shopping-list__form-control">
+        <button type="submit" class="shopping-list__button" id="shopping-list__button">
+          Add Item
+          <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          <span class="visually-hidden">Add Item</span>
+        </button>
+      </div>
+    </form>
+
+    <section class="shopping-list__filter">
+      <h2 class="visually-hidden">Filter Items</h2>
+      <label for="filter" class="visually-hidden">Filter Items</label>
+      <input type="text" id="filter" class="shopping-list__input shopping-list__input--filter"
+        placeholder="Filter Items" />
+    </section>
+
+    <section class="shopping-list__items">
+      <h2 class="visually-hidden">Your Items</h2>
+      <ul id="item-list" class="shopping-list__list">
+
+      </ul>
+    </section>
+
+    <button id="clear" class="shopping-list__clear-button">Clear All</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
